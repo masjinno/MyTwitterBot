@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTwitterBot", "MyTwitterBot\MyTwitterBot.csproj", "{5AA123C5-34C4-40D0-85AA-8D09456232B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RosenFlyerChecker", "RosenFlyerChecker\RosenFlyerChecker.csproj", "{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -33,6 +35,24 @@ Global
 		{5AA123C5-34C4-40D0-85AA-8D09456232B6}.Release|x86.ActiveCfg = Release|x86
 		{5AA123C5-34C4-40D0-85AA-8D09456232B6}.Release|x86.Build.0 = Release|x86
 		{5AA123C5-34C4-40D0-85AA-8D09456232B6}.Release|x86.Deploy.0 = Release|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|ARM.Build.0 = Debug|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x64.ActiveCfg = Debug|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x64.Build.0 = Debug|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x64.Deploy.0 = Debug|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x86.ActiveCfg = Debug|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x86.Build.0 = Debug|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Debug|x86.Deploy.0 = Debug|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|ARM.ActiveCfg = Release|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|ARM.Build.0 = Release|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|ARM.Deploy.0 = Release|ARM
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x64.ActiveCfg = Release|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x64.Build.0 = Release|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x64.Deploy.0 = Release|x64
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x86.ActiveCfg = Release|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x86.Build.0 = Release|x86
+		{090814A0-C37A-4BFE-B50C-AB5F4D76F8D0}.Release|x86.Deploy.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
