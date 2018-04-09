@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RosenFlyerChecker.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,17 @@ namespace RosenFlyerChecker
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        // プロパティ
+        public MainPageVM ViewModel { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
+            this.setUp();
+        }
+
+        private void setUp()
+        {
+            this.ViewModel = new MainPageVM();
         }
     }
 }
