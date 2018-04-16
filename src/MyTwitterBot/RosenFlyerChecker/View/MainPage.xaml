@@ -1,0 +1,76 @@
+﻿<Page
+    x:Class="RosenFlyerChecker.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RosenFlyerChecker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:vm="using:RosenFlyerChecker.ViewModel">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+          ScrollViewer.VerticalScrollBarVisibility="Visible">
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <!-- Get pdf URL -->
+                <Grid Padding="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                               Text="URL : "
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox Grid.Column="1"
+                             Text="{x:Bind ViewModel.Url, Mode=OneWay}"
+                             HorizontalAlignment="Stretch"/>
+                </Grid>
+                <StackPanel Padding="10">
+                    <Button Content="Get flyer URL"
+                            Margin="0,0,0,5"
+                            HorizontalAlignment="Stretch"
+                            Click="{x:Bind ViewModel.GetFlyerUrlClickAsync}"/>
+                    <ListView Height="92"
+                              ItemsSource="{x:Bind ViewModel.FlyerUrl, Mode=OneWay}"
+                              BorderThickness="2"
+                              BorderBrush="DarkGray"/>
+                </StackPanel>
+
+                <!-- Choose save file directory -->
+                <StackPanel Padding="10"
+                            ToolTipService.ToolTip="Can not be input because of fixed path">
+                    <Button Grid.Column="0"
+                            Content="Choose a directory to save"
+                            HorizontalAlignment="Stretch"
+                            Margin="0,0,0,5"
+                            Click="{x:Bind ViewModel.ChooseSaveDirectoryClickAsync}"
+                            IsEnabled="False"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0"
+                                   Text="directory to save :"
+                                   HorizontalAlignment="Left"
+                                   VerticalAlignment="Center"
+                                   Margin="10,0"/>
+                        <TextBox Grid.Column="1"
+                                 Text="{x:Bind ViewModel.SaveDirPath, Mode=TwoWay}"
+                                 HorizontalAlignment="Stretch"
+                                 IsReadOnly="True"/>
+                    </Grid>
+                </StackPanel>
+
+                <!-- Download pdf -->
+                <StackPanel Padding="10">
+                    <Button Content="Download flyer PDF"
+                            HorizontalAlignment="Stretch"
+                            Click="{x:Bind ViewModel.DownloadFlyerClickAsync}"/>
+                    <ListView/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
