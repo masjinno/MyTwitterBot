@@ -14,6 +14,7 @@ namespace RosenFlyerChecker.ViewModel
     {
         // member
         private HtmlCheck htmlCheck = new HtmlCheck();
+        private FileCheck fileCheck = new FileCheck();
 
         // Binding properties
 
@@ -100,6 +101,10 @@ namespace RosenFlyerChecker.ViewModel
                 MessageDialog md = new MessageDialog(ex.StackTrace, ex.Message);
                 await md.ShowAsync();
             }
+        }
+        
+        public void CheckFileEquals()
+        {
         }
     }
 }

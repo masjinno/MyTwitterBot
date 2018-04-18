@@ -81,7 +81,7 @@ namespace RosenFlyerChecker.Model
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="url">ダウンロード対象ファイルのURLURL</param>
+        /// <param name="url">ダウンロード対象ファイルのURL</param>
         /// <param name="dirPath">ダウンロードするディレクトリパス</param>
         private async void DownloadFileAsync(string url, string dirPath)
         {

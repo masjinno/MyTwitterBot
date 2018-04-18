@@ -70,6 +70,14 @@
                             Click="{x:Bind ViewModel.DownloadFlyerClickAsync}"/>
                     <ListView/>
                 </StackPanel>
+                
+                <!-- -->
+                <Button Content="Check file equals"
+                        Click="{x:Bind ViewModel.CheckFileEquals}"
+                        Margin="10"
+                        HorizontalAlignment="Stretch">
+                    
+                </Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
