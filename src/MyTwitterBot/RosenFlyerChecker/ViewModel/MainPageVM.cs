@@ -15,6 +15,8 @@ namespace RosenFlyerChecker.ViewModel
         // member
         private HtmlCheck htmlCheck = new HtmlCheck();
         private FileCheck fileCheck = new FileCheck();
+        private List<string> currentFiles = new List<string>();
+        private List<string> previousFiles = new List<string>();
 
         // Binding properties
 
@@ -102,9 +104,27 @@ namespace RosenFlyerChecker.ViewModel
                 await md.ShowAsync();
             }
         }
+
+        public async void SaveFlyerUrlAsync()
+        {
+            try
+            {
+                if (!Directory.Exists(this.SaveDirPath))
+                {
+                    Directory.CreateDirectory(this.SaveDirPath);
+                }
+                htmlCheck.WriteFlyerUrl(this.FlyerUrl, this.SaveDirPath);
+            }
+            catch (Exception ex)
+            {
+                MessageDialog md = new MessageDialog(ex.StackTrace, ex.Message);
+                await md.ShowAsync();
+            }
+        }
         
         public void CheckFileEquals()
         {
+            this.fileCheck.EqualsFiles(this.FlyerUrl[0], this.FlyerUrl[1]);
         }
     }
 }

@@ -67,8 +67,11 @@
                 <StackPanel Padding="10">
                     <Button Content="Download flyer PDF"
                             HorizontalAlignment="Stretch"
+                            Visibility="Collapsed"
                             Click="{x:Bind ViewModel.DownloadFlyerClickAsync}"/>
-                    <ListView/>
+                    <Button Content="Save flyer URLs"
+                            HorizontalAlignment="Stretch"
+                            />
                 </StackPanel>
                 
                 <!-- -->

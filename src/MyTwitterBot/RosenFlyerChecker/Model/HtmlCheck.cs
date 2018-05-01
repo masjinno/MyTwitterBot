@@ -103,5 +103,15 @@ namespace RosenFlyerChecker.Model
                 await md.ShowAsync();
             }
         }
+
+        /// <summary>
+        /// <paramref name="dirPath"/>に、<paramref name="fileUrl"/>を書き出す
+        /// </summary>
+        /// <param name="fileUrl">ダウンロード対象ファイルのURLのリスト</param>
+        /// <param name="dirPath">ダウンロードするディレクトリパス</param>
+        internal void WriteFlyerUrl(List<string> fileUrl, string dirPath)
+        {
+
+        }
     }
 }
